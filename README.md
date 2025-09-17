@@ -10,12 +10,14 @@ People always ask the same questions on [/r/JustBuyXEQT](https://www.reddit.com/
 
 ## How?
 
-Simply tag /u/XEQTbot with the appropriate trigger word immediately after the tag and he will show up.
+Simply tag /u/XEQTbot anywhere in a comment along with the appropriate [trigger word](./triggers.md) immediately after the tag and he will show up.
 
-![Example](example.png)
+<p align="center">
+  <img src="assets/example.png" alt="Example">
+</p>
 
 ## Your FAQ is incorrect or incomplete, you are stupid
 
-Please submit a PR! All you have to do is edit the appropriate `.md` file in [./faq](./faq) and once it's merged, your update should be reflected the next time XEQTbot is summoned (DMs are checked every 5 minutes). If you are creating a new file in [./faq](./faq), register its trigger words in [./faq](./triggers.md)
+Please submit a PR! All you have to do is edit the appropriate `.md` file in [./faq](./faq) and once it's merged, your update should be reflected the next time XEQTbot is summoned (DMs are checked every 5 minutes). If you are creating a new file in [./faq](./faq), don't forget to register its corresponding trigger word(s) in [this file](./triggers.md)
 
-When contributing, please keep in mind that the target audience is one who may be new at investing with limited knowledge. Use easy to understand terms and link to other beginner friendly sources like Ben Felix, canadiancouchpotato, boglehead, etc.
+When contributing, please keep in mind that the target audience is one who may be new at investing with limited knowledge. Use easy to understand terms and link to other beginner friendly sources like Ben Felix, Canadian Couch Potato, Bogleheads, etc.
