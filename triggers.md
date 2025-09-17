@@ -1,2 +1,3 @@
+- [whattobuy, what, xeqt](./faq/what.md)
 - [dividend, dividends, distributions, distribution, yield](./faq/dividends.md)
 - [lumpsum, dca](./faq/lumpsum-vs-dca.md)

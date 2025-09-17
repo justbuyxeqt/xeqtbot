@@ -2,6 +2,7 @@ import sys
 import os
 import time
 import re
+import argparse
 import praw
 from praw.exceptions import RedditAPIException, PRAWException
 
@@ -153,6 +154,47 @@ def main():
         sys.exit(1)
 
 
+def parse_args():
+    """Parse command line arguments."""
+    parser = argparse.ArgumentParser(
+        description="XEQT Reddit Bot - Responds to FAQ triggers",
+        formatter_class=argparse.RawDescriptionHelpFormatter,
+        epilog="""
+Examples:
+  python3 main.py                    # Run the Reddit bot
+  python3 main.py dividend           # Test response for 'dividend' keyword
+  python3 main.py --keyword lumpsum  # Test response for 'lumpsum' keyword
+        """
+    )
+    
+    parser.add_argument(
+        'keyword', 
+        nargs='?', 
+        help='Test keyword to generate response for (skips Reddit bot mode)'
+    )
+    
+    parser.add_argument(
+        '--keyword', '-k',
+        dest='keyword_flag',
+        help='Alternative way to specify test keyword'
+    )
+    
+    return parser.parse_args()
+
+
 if __name__ == "__main__":
-    main()
+    args = parse_args()
+    
+    # Determine the keyword from either positional or flag argument
+    test_keyword = args.keyword or args.keyword_flag
+    
+    if test_keyword:
+        # Local testing mode - generate and print response
+        print(f"Testing response for keyword: '{test_keyword}'")
+        print("=" * 60)
+        response = create_response(test_keyword)
+        print(response)
+    else:
+        # Normal Reddit bot mode
+        main()
 
