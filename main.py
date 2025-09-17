@@ -123,11 +123,11 @@ def main():
                     
                     response = create_response(keyword)
                     
-                    # Reply to the message
-                    message.reply(response)
-                    
                     # Mark as read
                     message.mark_read()
+
+                    # Reply to the message
+                    message.reply(response)
                     
                     print(f"Replied to message with keyword: {keyword}")
                     
