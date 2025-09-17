@@ -14,12 +14,44 @@ if not secrets_loaded:
 
 
 def read_faq_file(keyword):
-    """Read FAQ file for the given keyword, fallback to unknown.md if not found."""
-    faq_path = f"./faq/{keyword.lower()}.md"
+    """Read FAQ file for the given keyword by parsing triggers.md, fallback to unknown.md if not found."""
+    keyword = keyword.lower()
     
-    if not os.path.exists(faq_path):
-        faq_path = "./faq/unknown.md"
+    # First, try to find the keyword in triggers.md
+    try:
+        with open("./triggers.md", 'r', encoding='utf-8') as f:
+            for line in f:
+                line = line.strip()
+                if line.startswith('- [') and '](' in line:
+                    # Parse line format: - [keyword1, keyword2](./path/to/file.md)
+                    # Extract keywords between [ and ]
+                    keywords_start = line.find('[') + 1
+                    keywords_end = line.find(']')
+                    if keywords_start > 0 and keywords_end > keywords_start:
+                        keywords_str = line[keywords_start:keywords_end]
+                        keywords = [k.strip().lower() for k in keywords_str.split(',')]
+                        
+                        # Check if our keyword matches any in this line
+                        if keyword in keywords:
+                            # Extract file path between ( and )
+                            path_start = line.find('](') + 2
+                            path_end = line.find(')', path_start)
+                            if path_start > 1 and path_end > path_start:
+                                faq_path = line[path_start:path_end]
+                                break
+                else:
+                    continue
+            else:
+                # Keyword not found in triggers.md, use default
+                faq_path = "./template/unknown.md"
+    except FileNotFoundError:
+        print("Warning: triggers.md not found, using default unknown.md")
+        faq_path = "./template/unknown.md"
+    except Exception as e:
+        print(f"Error parsing triggers.md: {e}")
+        faq_path = "./template/unknown.md"
     
+    # Now read the determined FAQ file
     try:
         with open(faq_path, 'r', encoding='utf-8') as f:
             return f.read().strip()
@@ -33,7 +65,7 @@ def read_faq_file(keyword):
 def read_footer():
     """Read the footer content."""
     try:
-        with open("./footer.md", 'r', encoding='utf-8') as f:
+        with open("./template/footer.md", 'r', encoding='utf-8') as f:
             return f.read().strip()
     except FileNotFoundError:
         return ""
@@ -45,7 +77,7 @@ def read_footer():
 def extract_keyword(message_body):
     """Extract keyword from message that starts with /u/xeqtbot."""
     # Case-insensitive pattern to match /u/xeqtbot followed by space and keyword
-    pattern = r'(?i)^/?u/xeqtbot\s+(\w+)'
+    pattern = r'(?i)/?u/xeqtbot\s+(\w+)'
     match = re.search(pattern, message_body.strip())
     
     if match:
@@ -99,7 +131,7 @@ def main():
                     print(f"Replied to message with keyword: {keyword}")
                     
                     # Add delay to avoid rate limiting
-                    time.sleep(2)
+                    time.sleep(5)
                 else:
                     # Mark non-matching messages as read without responding
                     message.mark_read()
