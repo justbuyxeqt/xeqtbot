@@ -78,7 +78,7 @@ def read_footer():
 def extract_keyword(message_body):
     """Extract keyword from message that starts with /u/xeqtbot."""
     # Case-insensitive pattern to match /u/xeqtbot followed by space and keyword
-    pattern = r'(?i)/?u/xeqtbot\s+(\w+)'
+    pattern = r'(?i)/?u/xeqtbot\s+([a-zA-Z_-]+)'
     match = re.search(pattern, message_body.strip())
     
     if match:
