@@ -1,3 +1,3 @@
 #### What is XEQT?
 
-100% stock, globally diversified.
+100% stocks, globally diversified. Just buy it dummy

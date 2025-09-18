@@ -1,6 +1,6 @@
 - [diversify, other-etfs](./faq/add-other-etfs.md)
 - [dividend, dividends, distributions, distribution, yield](./faq/dividends.md)
-- [time, timing, whenbuy, when-buy](./faq/good-time-to-buy.md)
+- [time-to-buy, good-time, time, timing, whenbuy, when-buy](./faq/good-time-to-buy.md)
 - [lump-sum, lumpsum, dca](./faq/lumpsum-vs-dca.md)
 - [others, other-eqt, eqt, veqt, zeqt, feqt](./faq/others.md)
 - [price-high, pricehigh, toohigh, correction](./faq/price-too-high.md)
