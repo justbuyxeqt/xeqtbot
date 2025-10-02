@@ -92,7 +92,7 @@ def create_response(keyword):
     footer_content = read_footer()
     
     if footer_content:
-        return f"{faq_content}\n\n{footer_content}"
+        return f"{faq_content}\n\n*****\n\n{footer_content}"
     return faq_content
 
 
