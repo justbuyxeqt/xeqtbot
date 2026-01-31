@@ -114,7 +114,12 @@ def main():
         for message in reddit.inbox.unread(limit=None):
             if not message.was_comment:
                 continue  # Skip direct messages, only process comments
-            
+
+            if message.body in ["/u/xeqtbot","u/xeqtbot"]:
+                message.reply("Just Buy XEQT.")
+                time.sleep(5)
+                break
+
             try:
                 keyword = extract_keyword(message.body)
                 
