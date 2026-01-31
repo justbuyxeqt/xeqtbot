@@ -118,6 +118,7 @@ def main():
             if message.body.strip().lower() in ["/u/xeqtbot","u/xeqtbot"]:
                 message.reply("Just buy XEQT.")
                 time.sleep(5)
+                message.mark_read()
                 break
 
             try:
