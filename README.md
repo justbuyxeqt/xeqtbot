@@ -16,6 +16,8 @@ Simply tag /u/XEQTbot anywhere in a comment along with the appropriate [trigger 
   <img src="assets/example.png" alt="Example">
 </p>
 
+If the message only contains the bot's username, the default response will be "Just buy XEQT."
+
 ## Your FAQ is incorrect or incomplete, you are stupid
 
 Please submit a PR! All you have to do is edit the appropriate `.md` file in [./faq](./faq) and once it's merged, your update should be reflected the next time XEQTbot is summoned (DMs are checked every 5 minutes). If you are creating a new `.md` file in [./faq](./faq), please give it a descriptive yet succinct name, and register its corresponding trigger word(s) in [this file](./triggers.md).

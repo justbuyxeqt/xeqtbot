@@ -115,8 +115,8 @@ def main():
             if not message.was_comment:
                 continue  # Skip direct messages, only process comments
 
-            if message.body.strip() in ["/u/xeqtbot","u/xeqtbot"]:
-                message.reply("Just Buy XEQT.")
+            if message.body.strip().lower() in ["/u/xeqtbot","u/xeqtbot"]:
+                message.reply("Just buy XEQT.")
                 time.sleep(5)
                 break
 
