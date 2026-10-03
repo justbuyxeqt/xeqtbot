@@ -6,7 +6,7 @@ This is the source code for [/u/XEQTbot](https://www.reddit.com/user/XEQTbot/)
 
 ## Why?
 
-People always ask the same questions on [/r/JustBuyXEQT](https://www.reddit.com/r/JustBuyXEQT). I got tired of giving the same answers so I made a bot that can be triggered to post the answers to save myself and other some time.
+People always ask the same questions on [/r/JustBuyXEQT](https://www.reddit.com/r/JustBuyXEQT). I got tired of giving the same answers so I made a bot that can be triggered to post the answers to save myself and others some time.
 
 ## How?
 

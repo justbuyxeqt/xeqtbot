@@ -8,3 +8,4 @@
 - [taxes](./faq/taxes.md)
 - [what, what-is-xeqt](./faq/what-is-xeqt.md)
 - [buywhat, whattobuy, xeqt](./faq/xeqt.md)
+- [ath, buy-at-ath](./faq/ath.md)
