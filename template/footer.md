@@ -1,1 +1,1 @@
-*I am a bot and I was summoned by the person I'm replying to, in order to answer a frequently asked question about XEQT or a related topic. You can find my source code [here](https://github.com/justbuyxeqt/xeqtbot), contributions welcome. For education purposes, not financial advice, etc.*
+*I am a bot summoned by the person I'm replying to, in order to answer a frequently asked question about XEQT or a related topic. [Contributions welcome](https://github.com/justbuyxeqt/xeqtbot), for education purposes, not financial advice, etc.*
