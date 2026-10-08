@@ -13,7 +13,7 @@ People always ask the same questions on [/r/JustBuyXEQT](https://www.reddit.com/
 Simply tag /u/XEQTbot anywhere in a comment along with the appropriate [trigger word](./triggers.md) immediately after the tag and he will show up.
 
 <p align="center">
-  <img src="assets/example.png" alt="Example">
+  <img src="example.jpg" alt="Example">
 </p>
 
 If the message only contains the bot's username, the default response will be "Just buy XEQT."
