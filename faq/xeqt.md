@@ -1,3 +1,3 @@
-### I have a long time horizon and good tolerance to risk. What asset should I buy if I want exposure to stocks?
+### I have a long time horizon and good tolerance to risk. How can I build a broadly diversified portfolio of stocks?
 
 Just buy XEQT.
