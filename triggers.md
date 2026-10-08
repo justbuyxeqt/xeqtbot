@@ -10,3 +10,4 @@
 - [buywhat, whattobuy, xeqt](./faq/xeqt.md)
 - [ath, buy-at-ath](./faq/ath.md)
 - [fhsa](./faq/fhsa.md)
+- [nonreg, non-reg, non-registered](./faq/nonreg.md)
